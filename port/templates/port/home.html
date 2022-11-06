@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
 <section id="home">
     <div class="main">
@@ -10,7 +12,7 @@
     </button>
     </div>
 <div class="pichome">
-<img src="images/photo.jpeg" alt="">
+<img src="{% static 'media/photo.jpeg' %}" alt="">
 </div>       
 </section>
 <!-- about section -->
