@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<section id="contact">
+    <h1 class="class">CONTACT</h1>
+    <form action="" class="form">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="SEND" id="send">  
+    </form>
+</section>  
+
+{% endblock content %}

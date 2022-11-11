@@ -7,9 +7,8 @@
         <h1 class="heading">
             I AM <br> DERICK KIBASO OKINDA
        </h1>
-       <button class="btn">
-        HIRE ME
-    </button>
+       <a href="{% url 'contact' %}"> <button class="btn">HIRE ME</button></a>
+      
     </div>
 <div class="pichome">
 <img src="{% static 'media/photo.jpeg' %}" alt="">
@@ -86,12 +85,7 @@
     <h1 class="class">CONTACT</h1>
     <form action="" class="form">
         {% csrf_token %}
-        {{form}}
-         <!-- <input type="text" name="name" class="input" 
-        placeholder="Enter your name"> 
-        <input type="text" name="email" class="input"
-        placeholder="Enter your email">
-        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter your message"></textarea> -->
+        {{form.as_p}}
         <input type="submit" value="SEND" id="send">  
     </form>
 </section>  
