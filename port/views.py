@@ -10,7 +10,7 @@ def home(request):
         message = request.POST["message"]
         
         send_mail(
-            "message from" + name,
+            name,
             message,
             email,
             ["derrickokinda9@gmail.com", "developer.derrickokinda9@gmail.com"]
@@ -19,7 +19,7 @@ def home(request):
     form = Contact
     context = {
         "form":form,
-        "message":message,
+        
     }
     return render(request, "port/home.html", context)
 
