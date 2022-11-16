@@ -18,7 +18,8 @@ def home(request):
         )
     form = Contact
     context = {
-        "form":form
+        "form":form,
+        "message":message,
     }
     return render(request, "port/home.html", context)
 
